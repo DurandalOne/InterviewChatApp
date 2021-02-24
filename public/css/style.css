@@ -1,0 +1,37 @@
+.vertical-center {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.vertical-center .container-fluid {
+  flex-grow:1
+}
+h1 {
+  margin: 24px 0;
+}
+.messages p {
+  margin: 6px 0;
+}
+.mymessages {
+  text-align: right;
+  color: #2E6D88;
+  font-style: italic;
+}
+ul.messages.list-group {
+  max-height: 50vh;
+  overflow-y: scroll;
+}
+.typing {
+  font-style: italic;
+}
+.msg-delieverd {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #2F99F5;
+}
+.msg-read {
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 1.5em;
+  color: #2AC151;
+}
