@@ -42,7 +42,7 @@ function sendCurrentUsers(socket) {
 
 // io.on listens for events
 io.on("connection", function (socket) {
-  console.log("User is connected");
+  console.log("User " + clientInfo[socket.id].name + " is connected");
 
   //for disconnection
   socket.on("disconnect", function () {
@@ -87,7 +87,7 @@ io.on("connection", function (socket) {
   });
 
   socket.emit("message", {
-    text: "Welcome to Chat Appliction !",
+    text: "Welcome to NuanceLite !",
     timestamp: moment().valueOf(),
     name: "System",
   });
