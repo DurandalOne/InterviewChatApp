@@ -95,7 +95,7 @@ io.on("connection", function (socket) {
   // listen for client message
   socket.on("message", function (message) {
     console.log(
-      "Message Received - " + clientInfo[socket.id].room + " : " + message.text
+      "Message Received - " + clientInfo[socket.id].name + " : " + message.text
     );
     // to show all current users
     if (message.text === "@currentUsers") {
