@@ -42,7 +42,8 @@ function sendCurrentUsers(socket) {
 
 // io.on listens for events
 io.on("connection", function (socket) {
-  console.log("User " + clientInfo[socket.id].name + " is connected");
+  // console.log("User " + clientInfo[socket.id].name + " is connected");
+  console.log("User is connected");
 
   //for disconnection
   socket.on("disconnect", function () {
@@ -55,6 +56,7 @@ io.on("connection", function (socket) {
         name: "System",
         timestamp: moment().valueOf(),
       });
+      console.log(userdata.name + " has left the chat");
 
       // delete user data-
       delete clientInfo[socket.id];
@@ -71,6 +73,7 @@ io.on("connection", function (socket) {
       text: req.name + " has joined",
       timestamp: moment().valueOf(),
     });
+    console.log(req.name + " has connected to chat");
   });
 
   // to show who is typing Message
