@@ -42,8 +42,7 @@ function sendCurrentUsers(socket) {
 
 // io.on listens for events
 io.on("connection", function (socket) {
-  // console.log("User " + clientInfo[socket.id].name + " is connected");
-  console.log("User is connected");
+  // console.log("User is connected");
 
   //for disconnection
   socket.on("disconnect", function () {
@@ -109,7 +108,6 @@ io.on("connection", function (socket) {
       //socket.broadcast.emit("message",message);
       // now message should be only sent to users who are in same room
       socket.broadcast.to(clientInfo[socket.id].room).emit("message", message);
-      //socket.emit.to(clientInfo[socket.id].room).emit("message", message);
     }
   });
 });
