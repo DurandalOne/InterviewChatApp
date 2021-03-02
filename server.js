@@ -72,7 +72,7 @@ io.on("connection", function (socket) {
       text: req.name + " has joined",
       timestamp: moment().valueOf(),
     });
-    console.log(req.name + " has connected to chat");
+    console.log(req.name + ' has connected to chat room "' + req.room + '"');
   });
 
   // to show who is typing Message
