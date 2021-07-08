@@ -25,7 +25,8 @@ function timeoutFunction() {
     text: "",
   });
 }
-// if key is pressed typing message is seen else auto after 2 sec typing false message is send
+
+//If key is pressed typing message is seen. If nothing is pressed after 2 seconds the message disapears
 $("#messagebox").keyup(function () {
   console.log("happening");
   typing = true;
@@ -37,7 +38,7 @@ $("#messagebox").keyup(function () {
   timeout = setTimeout(timeoutFunction, 1000);
 });
 
-// below is the checking for page visibility api
+//Checking for page visibility api
 var hidden, visibilityChange;
 if (typeof document.hidden !== "undefined") {
   hidden = "hidden";
@@ -53,7 +54,7 @@ if (typeof document.hidden !== "undefined") {
   visibilityChange = "webkitvisibilitychange";
 }
 
-//listening for typing  event
+//Listening for the typing event
 socket.on("typing", function (message) {
   $(".typing").text(message.text);
 });
@@ -97,7 +98,7 @@ socket.on("message", function (message) {
     scrollTop: scrollLength - offset.top,
   });
 
-  // try notify , only when user has not open chat view
+  // Tries to notify the user, only when they have not opened the  chat view
   if (document[hidden]) {
     notifyMe(message);
     // also notify server that user has not seen messgae
@@ -107,7 +108,7 @@ socket.on("message", function (message) {
     };
     socket.emit("userSeen", umsg);
   } else {
-    // notify  server that user has seen message
+    //Notify the server that the user has seen message
     var umsg = {
       text: name + " has seen message",
       read: true,

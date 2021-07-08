@@ -98,7 +98,7 @@ io.on("connection", function (socket) {
   socket.on("message", function (message) {
     console.log(
       clientInfo[socket.id].room +
-        " - Message Received - " +
+        " - " +
         clientInfo[socket.id].name +
         " : " +
         message.text

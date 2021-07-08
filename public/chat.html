@@ -23,9 +23,22 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-6 col-md-offset-3 well">
-        <a class="btn btn-info " href="/index.html">
-          <i class="glyphicon glyphicon-remove"></i>
+<div class="parent">
+        <a class="btn btn-info text-left" href="/index.html">
+          <i class="glyphicon glyphicon-circle-arrow-left"></i>
           Exit Chat</a>
+
+<div class="dropdown pull-right">
+  <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Current Users <span class="glyphicon glyphicon-list"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1" id="userList">
+    <li><a href="#">User 1</a></li>
+    <li><a href="#">User 2</a></li>
+    <li><a href="#">User 3</a></li>
+    <li><a href="#">User 4</a></li>
+  </ul>
+</div>
+</div>
         <h1 class="room-title text-center"></h1>
 
         <ul class="messages list-group">
