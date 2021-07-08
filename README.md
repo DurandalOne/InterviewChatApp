@@ -1,4 +1,4 @@
-# React/react-to-print API 
+# Interview Chat App
 
 A web application which chatting between multiple users using a combination of JavaScript, Node.js, Socket.io and Bootstrap. The websocket API allows for multiple independent rooms. To view the app working, open up the app on two seperate tabs, making sure to enter the same chat room.
 
