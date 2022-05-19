@@ -53,4 +53,17 @@ ul.messages.list-group {
   color: #2AC151;
 }
 
+#thrust {
+  /* padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%; */
+  background-image: url(/public/images/404.gif);
+    background-size: cover;
+    background-position: 50%;
+    top: 50%;
+    left: 50%;
+    opacity: .3;
+}
+
 
